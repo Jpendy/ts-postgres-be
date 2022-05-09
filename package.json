@@ -2,10 +2,13 @@
   "name": "ts-postgres-be",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "seed-db": "ts-node -r dotenv/config src/setup-db.ts",
+    "build": "tsc",
+    "start": "ts-node -r dotenv/config src/server.ts",
+    "start:watch": "nodemon -r dotenv/config src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,8 @@
   },
   "homepage": "https://github.com/Jpendy/ts-postgres-be#readme",
   "dependencies": {
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/pg": "^8.6.5",
     "bcryptjs": "^2.4.3",
