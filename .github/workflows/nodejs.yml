@@ -37,7 +37,7 @@ jobs:
         run: npm install
 
       - name: Run the mock tests function
-        run: npm ci
+        # run: npm ci
         run: npm test
         env:
           CI: true
