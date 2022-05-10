@@ -6,4 +6,4 @@ CREATE TABLE users (
     password_hash TEXT
 );
 
-INSERT INTO users (email) VALUES ('Jpendy@gmail.com');
+--INSERT INTO users (email) VALUES ('Jpendy@gmail.com');
