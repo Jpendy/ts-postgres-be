@@ -1,4 +1,4 @@
-name: Running Tests
+name: Jest Tests
 
 on: [push]
 
@@ -34,10 +34,9 @@ jobs:
           node-version: 14.x
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run the mock tests function
-        # run: npm ci
+      - name: Run the tests
         run: npm test
         env:
           CI: true
