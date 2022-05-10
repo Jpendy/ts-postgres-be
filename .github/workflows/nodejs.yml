@@ -9,8 +9,6 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
     steps:
     - uses: actions/checkout@v2
     - run: npm ci
