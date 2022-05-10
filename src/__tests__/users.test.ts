@@ -15,7 +15,7 @@ describe('user tests', () => {
 
     it('it inserts a user', () => {
         return request(app)
-            .post('/api/v1/users/signup')
+            .post('/api/v1/auth/signup')
             .send({
                 email: 'test@test.com',
                 password: 'test'
