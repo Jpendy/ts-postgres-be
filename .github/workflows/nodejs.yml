@@ -36,12 +36,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: migrate database
-        run: node migrate.js
-        env:
-          DATABASE_URL: "postgres://postgres:postgres@localhost:5432/postgres"
-
       - name: Run the mock tests function
-        run: node getuser.js
+        run: npm test
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
